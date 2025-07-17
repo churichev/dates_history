@@ -1,0 +1,1 @@
+export { slowGrowth } from './slowGrowth';

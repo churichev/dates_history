@@ -1,0 +1,33 @@
+.numbersTransitionWrap {
+    display: flex;
+    // gap: 80px;
+    // gap:
+    justify-content: space-between;
+}
+
+@include mobile_landscape() {
+    .numbersTransitionWrap {
+        gap: 80px;
+        justify-content:center
+    }
+}
+
+.numberTransition {
+    font-size: 200px;
+    // font-size: clamp(56px, 14.5vw, 200px);
+    font-size: clamp(56px, 15vw, 200px);
+    font-weight: 700;
+
+    &Left {
+        color: #5d5fef;
+    }
+    &Right {
+        color: #ef5da8;
+    }
+}
+
+@include tablet() {
+    .numberTransitionLeft {
+        // color: red;
+    }
+}

@@ -1,0 +1,59 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid #c7cdd9;
+    padding-top: 20px;
+}
+
+.navigationButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    box-shadow: 0 0 30px 0px #3877ee;
+    flex-shrink: 0;
+    display: none;
+
+    svg {
+        border-radius: 50%;
+        height: 10px;
+    }
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.paginationEl {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+    --swiper-pagination-bottom: 32px;
+    --swiper-pagination-color: #42567a;
+    --swiper-pagination-bullet-inactive-color: #42567a;
+    --swiper-pagination-bullet-horizontal-gap: 8px;
+    --swiper-pagination-bullet-width: 6px;
+    --swiper-pagination-bullet-height: 6px;
+}
+
+.disabled {
+    opacity: 0;
+    cursor: default;
+}
+
+@include tablet() {
+    .paginationEl {
+        display: none;
+    }
+    .navigationButton {
+        display: flex;
+    }
+    .carousel {
+        border-top: 0;
+    }
+}

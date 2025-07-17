@@ -1,0 +1,57 @@
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.indicator {
+    font-size: 14px;
+}
+
+.controls {
+    display: flex;
+    gap: 9px;
+}
+
+.controlButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background: none;
+    border: 1px solid #9ba5ba;
+    border-radius: 50%;
+
+    &Disabled {
+        opacity: .3;
+    }
+
+    svg {
+        height: 7px;
+    }
+}
+
+.iconFlipped {
+    transform: rotate(180deg);
+}
+
+@include tablet() {
+    .navigation {
+        gap: 20px;
+    }
+
+    .controlButton {
+        width: 50px;
+        height: 50px;
+        svg {
+            height: 12px;
+        }
+    }
+    .indicator {
+        font-size: 16px;
+    }
+    .controls {
+        gap: 20px;
+    }
+}

@@ -1,0 +1,35 @@
+$border-color: #303e58;
+$text-color: #42567a;
+
+.pillItem {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px $border-color solid;
+    background-color: white;
+}
+
+.sideLabel,
+.centerLabel {
+    color: $text-color;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+
+.sideLabel {
+    position: absolute;
+    right: -20px;
+    width: 0;
+    transition: all 1s ease;
+    font-weight: 700;
+}
+
+.invisible {
+    opacity: 0;
+}
+.visible {
+    opacity: 1;
+}

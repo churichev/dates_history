@@ -1,0 +1,36 @@
+$background-color: #42567A;
+
+.scale {
+    transition: all 0.5s ease;
+    transform: scale(1);
+    position: relative;
+}
+
+.background {
+    background-color: $background-color;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.5s ease;
+    opacity: 0;
+    border-radius: 50%;
+
+    
+    &Visible:not(&:hover) {
+        opacity: 1;
+    }
+}
+
+.compressed {
+    transform: scale(0.15);
+    box-sizing: border-box;
+    // border: 12px solid black;
+    
+    &:hover {
+        transform: scale(1);
+
+    }
+}

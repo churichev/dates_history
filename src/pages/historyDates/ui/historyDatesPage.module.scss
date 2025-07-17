@@ -1,0 +1,108 @@
+.page {
+    padding-left: clamp(20px, 5vw, 40px);
+    padding-right: clamp(27px, 5vw, 40px);
+    padding-top: clamp(60px, 15vw, 170px);
+    padding-bottom: clamp(14px, 5vw, 0px);
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.timePeriodCircleNav {
+    margin: auto;
+    display: none;
+}
+
+.title {
+    font-weight: 700;
+    font-size: clamp(20px, 4vw, 56px);
+    color: #42567a;
+    line-height: 110%;
+}
+
+.circleWrap {
+    position: relative;
+}
+
+.timePeriodButtonNav {
+    position: absolute;
+    bottom: 13px;
+}
+
+@include tablet() {
+    .page::after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        width: 1px;
+        height: 100%;
+        z-index: -1;
+        background: #e2e5ec;
+    }
+
+    .timePeriodCircleNav {
+        display: block;
+    }
+
+    .content {
+        position: relative;
+        padding: 45px 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            left: clamp(-40px, 5vw, -80px);
+            width: calc(100% + clamp(40px, 5vw, 80px));
+            height: 1px;
+            z-index: -1;
+            background: #e2e5ec;
+        }
+    }
+
+    .datesTransition {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .title {
+        position: absolute; //desk
+        top: 0;
+        left: 50px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -70px;
+            left: -90px;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #3877ee, #ef5da8);
+            z-index: 1;
+        }
+    }
+
+    .timePeriodButtonNav {
+        bottom: 0;
+        left: 50px;
+    }
+}
+@include desktop() {
+    .page {
+        border: 1px solid #e2e5ec;
+    }
+}
